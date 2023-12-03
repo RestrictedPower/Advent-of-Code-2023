@@ -11,7 +11,7 @@ COOKIE = open(COOKIE_PATH).read()
 
 def getInput(day, year):
     URL = f"https://adventofcode.com/{year}/day/{day}/input"
-    return requests.get(url=URL, cookies={"session": COOKIE}).text
+    return requests.get(url=URL, cookies={"session": COOKIE}).text.rstrip()
 
 
 def saveCustomDay(day, year):
